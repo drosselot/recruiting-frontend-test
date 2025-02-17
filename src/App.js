@@ -51,7 +51,7 @@ function App() {
         selectedCreditNoteId && (<AssignButton setShowModal={setShowModal}/>)
       }
       {
-        showModal && (<CreditNoteModal setShowModal={setShowModal} reloadPage={reloadPage}/>)
+        showModal && (<CreditNoteModal setShowModal={setShowModal} reloadPage={reloadPage} invoices={[...creditNotes, ...billings]} selectedBillingId={selectedBillingId} selectedCreditNoteId={selectedCreditNoteId} />)
       }
     </div>
   );
